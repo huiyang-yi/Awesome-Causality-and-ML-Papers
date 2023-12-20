@@ -22,10 +22,10 @@ This is a repository for organizing articles related to causal discovery, invari
 7. NIPS 2022 [DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization](https://arxiv.org/abs/2209.08037)(提出基于对数行列式函数的无环性表示，并提出一种新的优化算法来取代ALM，在线性和非线性情况下，较大提升了求解精度和速度)
 
 ## Differentiable causal discovery from heterogeneous/nonstationary data
-1. KDD 2021 [DARING: Differentiable Causal Discovery with Residual Independence](https://dl.acm.org/doi/10.1145/3447548.3467439)(在评分函数中引入残差独立性约束，通过对抗学习优化两套参数，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的CD)
+1. KDD 2021 [DARING: Differentiable Causal Discovery with Residual Independence](https://dl.acm.org/doi/10.1145/3447548.3467439)(在评分函数中引入残差独立性约束，通过对抗学习优化两套参数，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的CD). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/DARING.pdf)
 2. arXiv 2022 [Differentiable Invariant Causal Discovery](https://arxiv.org/abs/2205.15638)(基于IRM+NOTEARS/非线性NOTEARS，解决异质数据中CD；基于IRM，环境要求高，需域注释，异质性局限于噪声分布变化，难在真实数据集上验证)
 3. ICLR 2023 [Boosting Differentiable Causal Discovery via Adaptive Sample Reweighting](https://arxiv.org/abs/2303.03187)(通过样本自适应加权，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的因果发现；性能与CD骨干模型高度相关，异质性局限于噪声方差变化)
-4. KDD 2023 Oral [Discovering Dynamic Causal Space for DAG Structure Learning](https://arxiv.org/abs/2306.02822)(图结构集成到评分函数中，能更好地刻画估计DAG与真实DAG间距离，进一步解决异质数据中CD；异质性局限于噪声均值变化，框架需基于可微CD)
+4. KDD 2023 Oral [Discovering Dynamic Causal Space for DAG Structure Learning](https://arxiv.org/abs/2306.02822)(图结构集成到评分函数中，能更好地刻画估计DAG与真实DAG间距离，进一步解决异质数据中CD；异质性局限于噪声均值变化，框架需基于可微CD). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/CASPER.pdf)
 
 ## Traditional causal discovery
 1. JMLR 2007 [Estimating high-dimensional directed acyclic graphs with the PC-algorithm](https://arxiv.org/abs/math/0510436)(PC算法通过条件独立性测试来确定因果骨架，并通过定向准则来确定因果方向，最终得到MEC)
