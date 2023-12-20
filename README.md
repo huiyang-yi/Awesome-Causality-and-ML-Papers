@@ -36,19 +36,12 @@ This is a repository for organizing articles related to causal discovery, invari
 6. JMLR 2011 [DirectLiNGAM: A direct method for learning a linear non-Gaussian structural equation model](https://arxiv.org/abs/1101.2489)(DirectLiNGAM相比于LiNGAM求解速度变慢，但精度和收敛性变好，同时尺度稳定)
 
 ## Traditional causal discovery from heterogeneous/nonstationary data
-
-0. CVPR Oral [Towards Principled Disentanglement for Domain Generalization](https://zhuanlan.zhihu.com/p/477855079)(将解耦用于DG，新理论，新方法)
-1. Arxiv [How robust are pre-trained models to distribution shift?](https://arxiv.org/abs/2206.08871)(自监督模型比有监督以及无监督模型更鲁棒，在小部分OOD数据上重新训练classifier提升很大)
-2. ICML [A Closer Look at Smoothness in Domain Adversarial Training](https://arxiv.org/abs/2206.08213)(平滑分类损失可以提高域对抗训练的泛化性能)
-3. CVPR [Bayesian Invariant Risk Minimization](https://zhuanlan.zhihu.com/p/528829486)(缓解IRM在模型过拟合时退化为ERM的问题)
-4. CVPR [Towards Unsupervised Domain Generalization](https://zhuanlan.zhihu.com/p/528829486)(关注模型预训练的过程对DG任务的影响，设计了一个在DG数据集无监督预训练的算法)
-5. CVPR [PCL: Proxy-based Contrastive Learning for Domain Generalization](https://zhuanlan.zhihu.com/p/528829486)(直接采用有监督的对比学习用于DG效果并不好，本文提出可行方法)
-6. CVPR [Style Neophile: Constantly Seeking Novel Styles for Domain Generalization](https://zhuanlan.zhihu.com/p/528829486)(本文提出了一种新的方法，能够产生更多风格的数据)
-7. Arxiv [WOODS: Benchmarks for Out-of-Distribution Generalization in Time Series Tasks](https://woods-benchmarks.github.io/)(一个关于时序数据OOD的多个benchmark)
-8. Arxiv [A Broad Study of Pre-training for Domain Generalization and Adaptation](https://arxiv.org/pdf/2203.11819.pdf)(深入研究了预训练对于DA,DG任务的作用，简单的使用目前最好的backbone足已取得SOTA的效果)
-9. Arxiv [Domain Generalization by Mutual-Information Regularization with Pre-trained Models](https://arxiv.org/pdf/2203.10789.pdf)(使用预训练模型的特征指导finetune的过程，提高泛化能力)
-10. ICLR Oral [A Fine-Grained Analysis on Distribution Shift](https://zhuanlan.zhihu.com/p/466675818)(如何准确的定义distribution shift，以及如何系统的测量模型的鲁棒性)
-11. ICLR Oral [Fine-Tuning Distorts Pretrained Features and Underperforms Out-of-Distribution](https://zhuanlan.zhihu.com/p/466675818)(fine-tuning（微调）和linear probing相辅相成)
+1. IJCAI 2015 [Identification of Time-Dependent Causal Model: a gaussian process treatment](https://dl.acm.org/doi/10.5555/2832581.2832745)(通过扩展高斯过程回归，能得因果模型系数如何随时间变化（全时图）)
+2. NIPS 2017 [Learning Causal Structures Using Regression Invariance](https://arxiv.org/abs/1705.09644)(利用不同域下回归系数的变化区分因果方向；只适用于线性)
+3. NIPS 2018 [Multi-domain causal structure learning in linear systems](https://dl.acm.org/doi/10.5555/3327345.3327524)(利用因果模块间的独立性解决多域因果发现；只适用于线性，大量独立性测试，很耗时)
+4. ICML 2019 [Causal Discovery and Forecasting in Nonstationary Environments with State-Space Models](https://arxiv.org/abs/1905.10857)(在非线性状态空间模型的框架下形式化了非平稳环境中的因果发现和预测；只适用于线性，仅因果方向识别)
+5. Neural Networks 2020 [FOM: Fourth-order moment based causal direction identification on the heteroscedastic data](https://dl.acm.org/doi/abs/10.1016/j.neunet.2020.01.006)(在异质数据中，提出噪声的四阶矩来衡量因果方向的不对称性；仅因果方向识别，局限于噪声方差变化)
+6. JMLR 2020 [Causal Discovery from Heterogeneous/Nonstationary Data with Independent Changes](https://arxiv.org/abs/1903.01672)(能在异质和非平稳数据中CD，能恢复潜变量因果影响+非平稳驱动力，变量可为向量值数据；但需大量独立性测试，很耗时。需域或时间注释的先验。需基于伪因果充分性假设)
 
 # Invariant learning
 
