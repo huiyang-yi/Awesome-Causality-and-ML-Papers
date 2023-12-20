@@ -1,4 +1,4 @@
-![image](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/assets/93638730/1214378a-fb9b-455e-95bf-7088eaedefc7)![image](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/assets/93638730/b2f62214-a813-4728-9c7a-531a531e67c3)# Awesome-Causality-and-ML-Papers
+# Awesome-Causality-and-ML-Papers
 This is a repository for organizing articles related to causal discovery, invariant learning, and machine learning. Most papers are linked to **my reading notes** and **my powerpoint summaries**.
 
 # Table of Contents (ongoing)
