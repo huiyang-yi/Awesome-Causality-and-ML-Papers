@@ -47,18 +47,19 @@ This is a repository for organizing articles related to causal discovery, invari
 10. ICLR Oral [A Fine-Grained Analysis on Distribution Shift](https://zhuanlan.zhihu.com/p/466675818)(如何准确的定义distribution shift，以及如何系统的测量模型的鲁棒性)
 11. ICLR Oral [Fine-Tuning Distorts Pretrained Features and Underperforms Out-of-Distribution](https://zhuanlan.zhihu.com/p/466675818)(fine-tuning（微调）和linear probing相辅相成)
 
-
 # Invariant learning
 
-1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(作者描述了他们早期进行手动红队测试的努力，旨在提高模型的安全性并测量模型的安全性)
-2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(调查为什么这些越狱攻击成功以及它们如何生成的。竞争目标和不匹配的泛化)
-3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(通过AI指导来生开发一个有帮助、诚实、无害且不会规避问题的AI助手)
-4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(AUTO-J，相比于传统的评估score，这是一个开源模型，能够有效地评估LLMs在各种任务上的表现。)
-
+1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合，只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据)
+2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(非线性ICP通过考虑条件独立性测试，突破ICP中线性高斯假设，求得非线性非参数下的父节点集)
+3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(ICP的时序扩展)
+4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(不变风险最小化IRM基于多环境训练数据，在优化目标中添加跨环境不变约束，学习得到预测目标Y的因果特征，因果特征可以不再是输入特征的子集)
+  
 # Machine learning
 
-1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(作者描述了他们早期进行手动红队测试的努力，旨在提高模型的安全性并测量模型的安全性)
-2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(调查为什么这些越狱攻击成功以及它们如何生成的。竞争目标和不匹配的泛化)
-3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(通过AI指导来生开发一个有帮助、诚实、无害且不会规避问题的AI助手)
-4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(AUTO-J，相比于传统的评估score，这是一个开源模型，能够有效地评估LLMs在各种任务上的表现。)
+1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合，只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据)
+2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(非线性ICP通过考虑条件独立性测试，突破ICP中线性高斯假设，求得非线性非参数下的父节点集)
+3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(ICP的时序扩展)
+4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(不变风险最小化IRM基于多环境训练数据，在优化目标中添加跨环境不变约束，学习得到预测目标Y的因果特征，因果特征可以不再是输入特征的子集)
+
+
 
