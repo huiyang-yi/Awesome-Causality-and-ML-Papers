@@ -1,2 +1,2 @@
 # Awesome-Causality-and-ML-Papers
-关于causal discovery, machine learning, causal representation learning等方向的论文阅读笔记和ppt总结
+This is a repository for organizing articles related to causal discovery, machine learning, and causal representation learning. Most papers are linked to **my reading notes** and **my powerpoint summaries**.
