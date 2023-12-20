@@ -13,7 +13,7 @@ This is a repository for organizing articles related to causal discovery, invari
 # Causal discovery
 
 ## Differentiable causal discovery
-1. NIPS 2018 Spotlight [DAGs with NO TEARS: Continuous Optimization for Structure Learning](https://arxiv.org/abs/1803.01422)(将组合无环约束转为光滑等式约束，通过增广拉格朗日法将等式约束优化转为无约束优化求解；但无环性约束难以保证，不能确保输出DAG。基于MSE的评分函数不合理。只考虑了线性)
+1. NIPS 2018 Spotlight [DAGs with NO TEARS: Continuous Optimization for Structure Learning](https://arxiv.org/abs/1803.01422)(将组合无环约束转为光滑等式约束，通过ALM将等式约束优化转为无约束优化求解；但无环性约束难以保证，不能确保输出DAG。基于MSE的评分函数不合理。只考虑了线性)
 2. ICML 2019 [DAG-GNN: DAG Structure Learning with Graph Neural Networks](https://arxiv.org/abs/1904.10098)(提出更适合在当前深度学习平台下实现的非循环约束，可处理线性/非线性、离散+连续、向量值+标量值数据，通过神经网络建模非线性)
 3. ICLR 2020 [Gradient-Based Neural DAG Learning](https://arxiv.org/abs/1906.02226)(通过NN建模非线性，提出与NN深度相关的加权邻接矩阵表示，给出了最大似然目标函数下的理论保证)
 4. NIPS 2020 [On the Role of Sparsity and DAG Constraints for Learning Linear DAGs](https://arxiv.org/abs/2006.10201)(在线性高斯情况下，通过最大似然+软DAG约束结合，取代最小二乘+硬DAG约束，优化更易求解，效果更好，并提供了理论保证)
@@ -28,25 +28,12 @@ This is a repository for organizing articles related to causal discovery, invari
 4. KDD 2023 Oral [Discovering Dynamic Causal Space for DAG Structure Learning](https://arxiv.org/abs/2306.02822)(图结构集成到评分函数中，能更好地刻画估计DAG与真实DAG间距离，进一步解决异质数据中CD；异质性局限于噪声均值变化，框架需基于可微CD)
 
 ## Traditional causal discovery
-1. JMLR  [Estimating high-dimensional directed acyclic graphs with the PC-algorithm](https://arxiv.org/abs/math/0510436)(基于独立性约束的因果发现共性：通过条件独立性测试来确定因果骨架，并通过定向准则来确定因果方向，最终得到MEC)
-2. NeurIPS [OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling](https://zhuanlan.zhihu.com/p/658191974)(使用在线模型集成，克服时序模型部署过程中遇到的分布变化问题)
-3. ICLR [Out-of-Distribution Representation Learning for Time Series Classification](https://arxiv.org/abs/2209.07027)(从OOD的角度考虑时序分类的问题)
-4. ICLR [Contrastive Learning for Unsupervised Domain Adaptation of Time Series](https://arxiv.org/abs/2206.06243)(用对比学习对其类间分布为时序DA学一个好的表征)
-5. ICLR [Pareto Invarian Risk Minimization](https://openreview.net/forum?id=esFxSb_0pSL)(通过多目标优化角度理解与缓解OOD/DG优化难问题)
-6. ICLR [Fairness and Accuracy under Domain Generalization](https://arxiv.org/abs/2301.13323)(不仅考虑泛化的性能，也考虑泛化的公平性)
-7. Arxiv [Adversarial Style Augmentation for Domain Generalization](https://arxiv.org/abs/2301.12643)(对抗学习添加图像扰动以提升模型泛化性)
-8. Arxiv [CLIPood: Generalizing CLIP to Out-of-Distributions](https://arxiv.org/abs/2302.00864)(使用预训练的CLIP模型，克服domain shift and open class两个问题)
-9. SIGKDD [Domain-Specific Risk Minimization for Out-of-Distribution Generalization](https://arxiv.org/abs/2208.08661)(每个域学习单独的分类器，测试阶段根据entropy动态组合)[[Code]](https://github.com/yfzhang114/AdaNPC)[[Reading Notes]](https://zhuanlan.zhihu.com/p/631524930)
-10. CVPR [Federated Domain Generalization with Generalization Adjustment](https://scholar.google.com/scholar_url?url=https://openaccess.thecvf.com/content/CVPR2023/papers/Zhang_Federated_Domain_Generalization_With_Generalization_Adjustment_CVPR_2023_paper.pdf&hl=zh-CN&sa=X&d=13348506996942284912&ei=sTpvZIjhI9OQ6rQP29uDqAU&scisig=AGlGAw8T1YjQNN8nVv2lI6LPBiGS&oi=scholaralrt&hist=lUnt8X4AAAAJ:7797965790415635509:AGlGAw-zJ0qtstLHlwZtiYmf7uNN&html=&pos=1&folt=rel)(为联邦域泛化(FedDG)提供了一个新的新的减小方差的正则项以鼓励公平性)
-11. CVPR [Distribution Shift Inversion for Out-of-Distribution Prediction](https://openaccess.thecvf.com/content/CVPR2023/papers/Yu_Distribution_Shift_Inversion_for_Out-of-Distribution_Prediction_CVPR_2023_paper.pdf)(TTA方法，将OoD测试样本用仅在源分布上训练的扩散模型向训练分布转移然后再测试)
-12. CVPR [SFP: Spurious Feature-targeted Pruning for Out-of-Distribution Generalization](https://arxiv.org/abs/2305.11615)(通过移除那些强烈依赖已识别的虚假特征的网络分支来实现modular risk minimization (MRM))
-13. CVPR [Improved Test-Time Adaptation for Domain Generalization](https://arxiv.org/abs/2304.04494)(使用一个具有可学习参数的损失函数，而不是预定义的函数)
-14. ICLR [Modeling the Data-Generating Process is Necessary for Out-of-Distribution Generalization](https://openreview.net/forum?id=uyqks-LILZX)(真实世界的数据通常在不同属性上有多种分布偏移，目前DG算法无法work，本文利用数据生成过程的知识自适应地识别和应用正确的正则化约束)
-15. ICLR [Using Language to Extend to Unseen Domains](https://openreview.net/forum?id=eR2dG8yjnQ)(利用CLIP模型的知识将源域图像embedding转换为多个目标域的representation（从photos of birds转化为paintings of birds）)
-16. ICLR [How robust is unsupervised representation learning to distribution shift?](https://openreview.net/forum?id=LiXDW7CF94J)(无监督学习算法中学习到的表示在各种极端和现实分布变化下的泛化效果优于SL)
-17. ICLR [PGrad: Learning Principal Gradients For Domain Generalization](https://openreview.net/forum?id=CgCmwcfgEdH)(测量了所有训练域的训练动态,最终的梯度聚合了并给出一个鲁棒的优化方向，有点像meta-learning)
-18. ICLR [Causal Balancing for Domain Generalization](https://openreview.net/forum?id=F91SROvVJ_6)(提出了一种平衡的小批量抽样策略，将有偏差的数据分布转换为平衡分布，基于数据生成过程的潜在因果机制的不变性。)
-19. ICLR [Cycle-consistent Masked AutoEncoder for Unsupervised Domain Generalization](https://openreview.net/forum?id=wC98X1qpDBA)(无监督域泛化(UDG)，其中不需要成对的数据来连接不同的域。这个问题的研究相对较少，但在DG背景下是有意义的。)
+1. JMLR 2007 [Estimating high-dimensional directed acyclic graphs with the PC-algorithm](https://arxiv.org/abs/math/0510436)(PC算法通过条件独立性测试来确定因果骨架，并通过定向准则来确定因果方向，最终得到MEC)
+2. JMLR 2002 [Optimal structure identification with greedy search](https://dl.acm.org/doi/10.1162/153244303321897717)(GES定义一个评分函数用于衡量MEC与观测数据的拟合程度，并搜索DAG空间以找到得分最高的MEC；GES采用局部启发式方法对DAG进行搜索)
+3. JMLR 2006 [A Linear Non-Gaussian Acyclic Model for Causal Discovery](https://dl.acm.org/doi/10.5555/1248547.1248619)(LiNGAM假设变量间的函数关系为线性非高斯，通过原因与残差的独立性判断因果方向，同时将LiNGAM模型转为ICA的形式高效求解)
+4. NIPS 2008 [Nonlinear causal discovery with additive noise models](https://arxiv.org/abs/2206.06243)(ANM假设变量间的函数关系为非线性加性噪声模型，通过原因与残差的独立性判断因果方向)
+5. UAI 2009 [On the Identifiability of the Post-Nonlinear Causal Model](https://arxiv.org/abs/1205.2599)(PNL假设变量间的函数关系为后非线性模型，通过原因与残差的独立性判断因果方向，并可证明LiNGAM与ANM是PNL的特殊形式)
+6. JMLR 2011 [DirectLiNGAM: A direct method for learning a linear non-Gaussian structural equation model](https://arxiv.org/abs/1101.2489)(DirectLiNGAM相比于LiNGAM求解速度变慢，但精度和收敛性变好，同时尺度稳定)
 
 ## Traditional causal discovery from heterogeneous/nonstationary data
 
