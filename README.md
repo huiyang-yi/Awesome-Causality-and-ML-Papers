@@ -1,5 +1,5 @@
 # Awesome-Causality-and-ML-Papers
-This is a repository for organizing articles related to causal discovery, invariant learning, and machine learning. Most papers are linked to **my reading notes** and **my powerpoint summaries**.
+This is a repository for organizing articles related to causal discovery, invariant learning, and machine learning. Most papers are linked to **my reading notes** and **my slides summaries**.
 
 # Table of Contents (ongoing)
 * [Causal discovery](#causaldiscovery)
