@@ -1,18 +1,30 @@
-# Awesome-Causality-and-ML-Papers
+![image](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/assets/93638730/97a8ef66-59fa-447d-b6b8-74c09fd8d0a0)![image](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/assets/93638730/024eefe2-708b-440e-a7e1-9982e181cb45)# Awesome-Causality-and-ML-Papers
 This is a repository for organizing articles related to causal discovery, invariant learning, and machine learning. Most papers are linked to **my reading notes** and **my powerpoint summaries**.
 
 # Table of Contents (ongoing)
 * [Causal discovery](#causaldiscovery)
-   * [2023](#2023)
-   * [2022](#2022)
-   * [2017-2021](#old-but-important)
+   * [Differentiable causal discovery](#new)
+   * [Differentiable causal discovery from heterogeneous/nonstationary data](#new-heterogeneous/nonstationary)
+   * [Traditional causal discovery](#old-but-important)
+   * [Traditional causal discovery from heterogeneous/nonstationary data](#old-but-important-heterogeneous/nonstationary)
 * [Invariant learning](#invariantlearning)
 * [Machine learning](#machinelearning)
+  
 # Causal discovery
 
-## 2023
-0. ICLR [Free Lunch for Domain Adversarial Training: Environment Label Smoothing](https://arxiv.org/abs/2302.00194)(环境标签平滑，一行代码提升对抗学习的稳定性和泛化性). [[Code]](https://github.com/yfzhang114/Environment-Label-Smoothing)  [[Reading Notes]](https://zhuanlan.zhihu.com/p/600466715)
-1. ICML  [AdaNPC: Exploring Non-Parametric Classifier for Test-Time Adaptation](https://arxiv.org/abs/2304.12566)(用KNN进行测试时间自适应，从理论上分析了TTA work的原因)[[Code]](https://github.com/yfzhang114/AdaNPC)  [[Reading Notes]](https://zhuanlan.zhihu.com/p/624770864)
+## Differentiable causal discovery
+1. NIPS 2018 Spotlight [DAGs with NO TEARS: Continuous Optimization for Structure Learning](https://arxiv.org/abs/1803.01422)(将组合无环约束转为光滑等式约束，并通过增广拉格朗日法将等式约束优化转为无约束优化求解；但无环性约束难以保证，不能确保输出DAG。基于最小二乘的评分函数不合理。只考虑了线性情况)
+2. ICML 2019 [DAG-GNN: DAG Structure Learning with Graph Neural Networks](https://arxiv.org/abs/1904.10098)(提出更适合在当前深度学习平台下实现的非循环约束，可处理线性/非线性、离散+连续、向量值+标量值数据，通过神经网络建模非线性)
+3. ICLR 2020 [Gradient-Based Neural DAG Learning](https://arxiv.org/abs/1906.02226)(通过NN建模非线性，提出与NN深度相关的加权邻接矩阵表示，给出了最大似然目标函数下的理论保证)
+4. NIPS 2020 [On the Role of Sparsity and DAG Constraints for Learning Linear DAGs](https://arxiv.org/abs/2006.10201)(在线性高斯情况下，通过最大似然+软DAG约束结合，取代最小二乘+硬DAG约束，优化更易求解，效果更好，并提供了理论保证)
+5. AISTATS 2020 [Learning Sparse Nonparametric DAGs](https://arxiv.org/abs/1909.13189)(通过NN建模非线性，提出与NN深度独立的加权邻接矩阵表示)
+6. ICML 2021 [DAGs with No Curl: An Efficient DAG Structure Learning Approach](https://arxiv.org/abs/2106.07197)(基于图外微积分理论提出DAG新表示，并基于图Hodge理论提出更高效优化算法，隐式确保无环约束，避免多次迭代)
+7. NIPS 2022 [DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization](https://arxiv.org/abs/2209.08037)(提出基于对数行列式函数的无环性表示，并提出一种新的优化算法来取代ALM，在线性和非线性情况下，较大提升了求解精度和速度)
+
+## Differentiable causal discovery from heterogeneous/nonstationary data
+
+## Traditional causal discovery
+1. JMLR  [Estimating high-dimensional directed acyclic graphs with the PC-algorithm](https://arxiv.org/abs/math/0510436)(基于独立性约束的因果发现共性：通过条件独立性测试来确定因果骨架，并通过定向准则来确定因果方向，最终得到MEC)
 2. NeurIPS [OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling](https://zhuanlan.zhihu.com/p/658191974)(使用在线模型集成，克服时序模型部署过程中遇到的分布变化问题)
 3. ICLR [Out-of-Distribution Representation Learning for Time Series Classification](https://arxiv.org/abs/2209.07027)(从OOD的角度考虑时序分类的问题)
 4. ICLR [Contrastive Learning for Unsupervised Domain Adaptation of Time Series](https://arxiv.org/abs/2206.06243)(用对比学习对其类间分布为时序DA学一个好的表征)
@@ -32,7 +44,7 @@ This is a repository for organizing articles related to causal discovery, invari
 18. ICLR [Causal Balancing for Domain Generalization](https://openreview.net/forum?id=F91SROvVJ_6)(提出了一种平衡的小批量抽样策略，将有偏差的数据分布转换为平衡分布，基于数据生成过程的潜在因果机制的不变性。)
 19. ICLR [Cycle-consistent Masked AutoEncoder for Unsupervised Domain Generalization](https://openreview.net/forum?id=wC98X1qpDBA)(无监督域泛化(UDG)，其中不需要成对的数据来连接不同的域。这个问题的研究相对较少，但在DG背景下是有意义的。)
 
-## 2022
+## Traditional causal discovery from heterogeneous/nonstationary data
 
 0. CVPR Oral [Towards Principled Disentanglement for Domain Generalization](https://zhuanlan.zhihu.com/p/477855079)(将解耦用于DG，新理论，新方法)
 1. Arxiv [How robust are pre-trained models to distribution shift?](https://arxiv.org/abs/2206.08871)(自监督模型比有监督以及无监督模型更鲁棒，在小部分OOD数据上重新训练classifier提升很大)
@@ -49,7 +61,7 @@ This is a repository for organizing articles related to causal discovery, invari
 
 # Invariant learning
 
-1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合，只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据)
+1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合；只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据)
 2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(非线性ICP通过考虑条件独立性测试，突破ICP中线性高斯假设，求得非线性非参数下的父节点集)
 3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(ICP的时序扩展)
 4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(不变风险最小化IRM基于多环境训练数据，在优化目标中添加跨环境不变约束，学习得到预测目标Y的因果特征，因果特征可以不再是输入特征的子集)
