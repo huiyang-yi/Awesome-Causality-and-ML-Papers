@@ -8,6 +8,7 @@ This is a repository for organizing articles related to causal discovery, invari
    * [Traditional causal discovery](#old-but-important)
    * [Traditional causal discovery from heterogeneous/nonstationary data](#old-but-important-heterogeneous/nonstationary)
 * [Invariant learning](#invariantlearning)
+* [Basis of causal inference](#Basisofcausalinference)
 * [Machine learning](#machinelearning)
   
 # Causal discovery
@@ -45,11 +46,16 @@ This is a repository for organizing articles related to causal discovery, invari
 
 # Invariant learning
 
-1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合；只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/ICP.pdf)
-2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(非线性ICP通过考虑条件独立性测试，突破ICP中线性高斯假设，求得非线性非参数下的父节点集). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/非线性ICP.pdf)
-3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(ICP的时序扩展). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/时序ICP.pdf)
-4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(不变风险最小化IRM基于多环境训练数据，在优化目标中添加跨环境不变约束，学习得到预测目标Y的因果特征，因果特征可以不再是输入特征的子集). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/IRM.pdf)
-  
+1. JRSSB 2016 [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合；只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/ICP.pdf)
+2. Journal of Causal Inference 2018 [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(非线性ICP通过考虑条件独立性测试，突破ICP中线性高斯假设，求得非线性非参数下的父节点集). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/非线性ICP.pdf)
+3. JASA 2018 [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(ICP的时序扩展). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/时序ICP.pdf)
+4. arXiv 2019 [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(不变风险最小化IRM基于多环境训练数据，在优化目标中添加跨环境不变约束，学习得到预测目标Y的因果特征，因果特征可以不再是输入特征的子集). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/IRM.pdf)
+
+# Basis of causal inference
+
+1. YouTube 2020 [Introduction to Causal Inference](https://www.bradyneal.com/causal-inference-course)(POM和SCM框架的基础). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/Basis%20of%20causal%20inference.pdf)
+2. The MIT Press 2017 [Elements of causal inference: foundations and learning algorithms](https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf)(书中包括POM和SCM框架，因果发现和时序因果发现基础). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/The%20basis%20of%20causal%20discovery%20from%20time%20series%20data.pdf)
+
 # Machine learning
 
 
