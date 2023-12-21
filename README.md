@@ -57,7 +57,7 @@ This is a repository for organizing articles related to causal discovery, invari
 2. The MIT Press 2017 [Elements of causal inference: foundations and learning algorithms](https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf)(书中包括POM和SCM框架，因果发现和时序因果发现基础). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/The%20basis%20of%20causal%20discovery%20from%20time%20series%20data.pdf)
 
 # Machine learning
-1. bilibili 2020 [Tensorflow2.0](https://www.bradyneal.com/causal-inference-course)(介绍tensorflow2框架，CNN和RNN)
+1. bilibili 2020 [Tensorflow2.0](https://www.bilibili.com/video/BV1B7411L7Qt/?spm_id_from=333.999.0.0&vd_source=618b3a1cb488e3aeed9429a4fc8d9a65)(介绍tensorflow2框架，CNN和RNN)
 2. NIPS 2014 [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)(GAN). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/GAN.pdf)
 3. arXiv 2013 [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114)(VAE). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/VAE.pdf)
 4. NIPS 2017 [Attention Is All You Need](https://arxiv.org/abs/1706.03762)(Transformer). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/Transformer.pdf)
