@@ -28,7 +28,7 @@ This is a repository for organizing articles related to causal discovery, invari
 3. ICLR 2023 [Boosting Differentiable Causal Discovery via Adaptive Sample Reweighting](https://arxiv.org/abs/2303.03187)(通过样本自适应加权，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的因果发现；性能与CD骨干模型高度相关，异质性局限于噪声方差变化). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/ReScore.pdf)
 4. KDD 2023 Oral [Discovering Dynamic Causal Space for DAG Structure Learning](https://arxiv.org/abs/2306.02822)(图结构集成到评分函数中，能更好地刻画估计DAG与真实DAG间距离，进一步解决异质数据中CD；异质性局限于噪声均值变化，框架需基于可微CD). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/CASPER.pdf)
 
-## Traditional causal discovery [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/CASPER.pdf)
+## Traditional causal discovery
 1. JMLR 2007 [Estimating high-dimensional directed acyclic graphs with the PC-algorithm](https://arxiv.org/abs/math/0510436)(PC算法通过条件独立性测试来确定因果骨架，并通过定向准则来确定因果方向，最终得到MEC)
 2. JMLR 2002 [Optimal structure identification with greedy search](https://dl.acm.org/doi/10.1162/153244303321897717)(GES定义一个评分函数用于衡量MEC与观测数据的拟合程度，并搜索DAG空间以找到得分最高的MEC；GES采用局部启发式方法对DAG进行搜索)
 3. JMLR 2006 [A Linear Non-Gaussian Acyclic Model for Causal Discovery](https://dl.acm.org/doi/10.5555/1248547.1248619)(LiNGAM假设变量间的函数关系为线性非高斯，通过原因与残差的独立性判断因果方向，同时将LiNGAM模型转为ICA的形式高效求解)
@@ -36,7 +36,7 @@ This is a repository for organizing articles related to causal discovery, invari
 5. UAI 2009 [On the Identifiability of the Post-Nonlinear Causal Model](https://arxiv.org/abs/1205.2599)(PNL假设变量间的函数关系为后非线性模型，通过原因与残差的独立性判断因果方向，并可证明LiNGAM与ANM是PNL的特殊形式)
 6. JMLR 2011 [DirectLiNGAM: A direct method for learning a linear non-Gaussian structural equation model](https://arxiv.org/abs/1101.2489)(DirectLiNGAM相比于LiNGAM求解速度变慢，但精度和收敛性变好，同时尺度稳定)
 
-## Traditional causal discovery from heterogeneous/nonstationary data [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/CASPER.pdf)
+## Traditional causal discovery from heterogeneous/nonstationary data
 1. IJCAI 2015 [Identification of Time-Dependent Causal Model: a gaussian process treatment](https://dl.acm.org/doi/10.5555/2832581.2832745)(通过扩展高斯过程回归，能得因果模型系数如何随时间变化（全时图）)
 2. NIPS 2017 [Learning Causal Structures Using Regression Invariance](https://arxiv.org/abs/1705.09644)(利用不同域下回归系数的变化区分因果方向；只适用于线性)
 3. NIPS 2018 [Multi-domain causal structure learning in linear systems](https://dl.acm.org/doi/10.5555/3327345.3327524)(利用因果模块间的独立性解决多域因果发现；只适用于线性，大量独立性测试，很耗时)
@@ -57,6 +57,10 @@ This is a repository for organizing articles related to causal discovery, invari
 2. The MIT Press 2017 [Elements of causal inference: foundations and learning algorithms](https://library.oapen.org/bitstream/id/056a11be-ce3a-44b9-8987-a6c68fce8d9b/11283.pdf)(书中包括POM和SCM框架，因果发现和时序因果发现基础). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/The%20basis%20of%20causal%20discovery%20from%20time%20series%20data.pdf)
 
 # Machine learning
+1. bilibili 2020 [Tensorflow2.0](https://www.bradyneal.com/causal-inference-course)(介绍tensorflow2框架，CNN和RNN)
+2. NIPS 2014 [Generative Adversarial Networks](https://arxiv.org/abs/1406.2661)(GAN). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/GAN.pdf)
+3. arXiv 2013 [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114)(VAE). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/VAE.pdf)
+4. NIPS 2017 [Attention Is All You Need](https://arxiv.org/abs/1706.03762)(Transformer). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/Transformer.pdf)
 
 
 
