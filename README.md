@@ -13,18 +13,18 @@ This is a repository for organizing articles related to causal discovery, invari
 # Causal discovery
 
 ## Differentiable causal discovery
-1. NIPS 2018 Spotlight [DAGs with NO TEARS: Continuous Optimization for Structure Learning](https://arxiv.org/abs/1803.01422)(将组合无环约束转为光滑等式约束，通过ALM将等式约束优化转为无约束优化求解；但无环性约束难以保证，不能确保输出DAG。基于MSE的评分函数不合理。只考虑了线性)
-2. ICML 2019 [DAG-GNN: DAG Structure Learning with Graph Neural Networks](https://arxiv.org/abs/1904.10098)(提出更适合在当前深度学习平台下实现的非循环约束，可处理线性/非线性、离散+连续、向量值+标量值数据，通过神经网络建模非线性)
-3. ICLR 2020 [Gradient-Based Neural DAG Learning](https://arxiv.org/abs/1906.02226)(通过NN建模非线性，提出与NN深度相关的加权邻接矩阵表示，给出了最大似然目标函数下的理论保证)
-4. NIPS 2020 [On the Role of Sparsity and DAG Constraints for Learning Linear DAGs](https://arxiv.org/abs/2006.10201)(在线性高斯情况下，通过最大似然+软DAG约束结合，取代最小二乘+硬DAG约束，优化更易求解，效果更好，并提供了理论保证)
-5. AISTATS 2020 [Learning Sparse Nonparametric DAGs](https://arxiv.org/abs/1909.13189)(通过NN建模非线性，提出与NN深度独立的加权邻接矩阵表示)
-6. ICML 2021 [DAGs with No Curl: An Efficient DAG Structure Learning Approach](https://arxiv.org/abs/2106.07197)(基于图外微积分理论提出DAG新表示，并基于图Hodge理论提出更高效优化算法，隐式确保无环约束，避免多次迭代)
-7. NIPS 2022 [DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization](https://arxiv.org/abs/2209.08037)(提出基于对数行列式函数的无环性表示，并提出一种新的优化算法来取代ALM，在线性和非线性情况下，较大提升了求解精度和速度)
+1. NIPS 2018 Spotlight [DAGs with NO TEARS: Continuous Optimization for Structure Learning](https://arxiv.org/abs/1803.01422)(将组合无环约束转为光滑等式约束，通过ALM将等式约束优化转为无约束优化求解；但无环性约束难以保证，不能确保输出DAG。基于MSE的评分函数不合理。只考虑了线性). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/NOTEARS.pdf)
+2. ICML 2019 [DAG-GNN: DAG Structure Learning with Graph Neural Networks](https://arxiv.org/abs/1904.10098)(提出更适合在当前深度学习平台下实现的非循环约束，可处理线性/非线性、离散+连续、向量值+标量值数据，通过神经网络建模非线性). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/DAG-GNN.pdf)
+3. ICLR 2020 [Gradient-Based Neural DAG Learning](https://arxiv.org/abs/1906.02226)(通过NN建模非线性，提出与NN深度相关的加权邻接矩阵表示，给出了最大似然目标函数下的理论保证). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/GraN-DAG.pdf)
+4. NIPS 2020 [On the Role of Sparsity and DAG Constraints for Learning Linear DAGs](https://arxiv.org/abs/2006.10201)(在线性高斯情况下，通过最大似然+软DAG约束结合，取代最小二乘+硬DAG约束，优化更易求解，效果更好，并提供了理论保证). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/GOLEM.pdf)
+5. AISTATS 2020 [Learning Sparse Nonparametric DAGs](https://arxiv.org/abs/1909.13189)(通过NN建模非线性，提出与NN深度独立的加权邻接矩阵表示). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/NOTEARS-MLP%2BSOB.pdf)
+6. ICML 2021 [DAGs with No Curl: An Efficient DAG Structure Learning Approach](https://arxiv.org/abs/2106.07197)(基于图外微积分理论提出DAG新表示，并基于图Hodge理论提出更高效优化算法，隐式确保无环约束，避免多次迭代). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/NoCurl.pdf)
+7. NIPS 2022 [DAGMA: Learning DAGs via M-matrices and a Log-Determinant Acyclicity Characterization](https://arxiv.org/abs/2209.08037)(提出基于对数行列式函数的无环性表示，并提出一种新的优化算法来取代ALM，在线性和非线性情况下，较大提升了求解精度和速度). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/DAGMA.pdf)
 
 ## Differentiable causal discovery from heterogeneous/nonstationary data
 1. KDD 2021 [DARING: Differentiable Causal Discovery with Residual Independence](https://dl.acm.org/doi/10.1145/3447548.3467439)(在评分函数中引入残差独立性约束，通过对抗学习优化两套参数，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的CD). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/DARING.pdf)
 2. arXiv 2022 [Differentiable Invariant Causal Discovery](https://arxiv.org/abs/2205.15638)(基于IRM+NOTEARS/非线性NOTEARS，解决异质数据中CD；基于IRM，环境要求高，需域注释，异质性局限于噪声分布变化，难在真实数据集上验证)
-3. ICLR 2023 [Boosting Differentiable Causal Discovery via Adaptive Sample Reweighting](https://arxiv.org/abs/2303.03187)(通过样本自适应加权，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的因果发现；性能与CD骨干模型高度相关，异质性局限于噪声方差变化)
+3. ICLR 2023 [Boosting Differentiable Causal Discovery via Adaptive Sample Reweighting](https://arxiv.org/abs/2303.03187)(通过样本自适应加权，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的因果发现；性能与CD骨干模型高度相关，异质性局限于噪声方差变化). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/ReScore.pdf)
 4. KDD 2023 Oral [Discovering Dynamic Causal Space for DAG Structure Learning](https://arxiv.org/abs/2306.02822)(图结构集成到评分函数中，能更好地刻画估计DAG与真实DAG间距离，进一步解决异质数据中CD；异质性局限于噪声均值变化，框架需基于可微CD). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/CASPER.pdf)
 
 ## Traditional causal discovery [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/CASPER.pdf)
@@ -45,10 +45,10 @@ This is a repository for organizing articles related to causal discovery, invari
 
 # Invariant learning
 
-1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合；只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据)
-2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(非线性ICP通过考虑条件独立性测试，突破ICP中线性高斯假设，求得非线性非参数下的父节点集)
-3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(ICP的时序扩展)
-4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(不变风险最小化IRM基于多环境训练数据，在优化目标中添加跨环境不变约束，学习得到预测目标Y的因果特征，因果特征可以不再是输入特征的子集)
+1. JRSSB [Causal inference by using invariant prediction: identification and confidence intervals](https://arxiv.org/abs/1501.01332)(不变因果预测ICP基于多环境训练数据，利用假设检验得到预测目标Y的因果父节点集合；只适用于线性情况且所得因果父节点集是输入特征的子集，不适用于图像和文本等高维复杂数据). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/ICP.pdf)
+2. Journal of Causal Inference [Invariant Causal Prediction for Nonlinear Models](https://arxiv.org/abs/1706.08576)(非线性ICP通过考虑条件独立性测试，突破ICP中线性高斯假设，求得非线性非参数下的父节点集). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/非线性ICP.pdf)
+3. JASA [Invariant Causal Prediction for Sequential Data](https://arxiv.org/abs/1706.08058)(ICP的时序扩展). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/时序ICP.pdf)
+4. arXiv [Invariant Risk Minimization](https://arxiv.org/abs/1907.02893)(不变风险最小化IRM基于多环境训练数据，在优化目标中添加跨环境不变约束，学习得到预测目标Y的因果特征，因果特征可以不再是输入特征的子集). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/IRM.pdf)
   
 # Machine learning
 
