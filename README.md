@@ -28,7 +28,7 @@ This is a repository for organizing articles related to causal discovery, invari
 3. arXiv 2022 [Differentiable Invariant Causal Discovery](https://arxiv.org/abs/2205.15638)(基于IRM+NOTEARS/非线性NOTEARS，解决异质数据中CD；基于IRM，环境要求高，需域注释，异质性局限于噪声分布变化，难在真实数据集上验证)
 4. ICLR 2023 [Boosting Differentiable Causal Discovery via Adaptive Sample Reweighting](https://arxiv.org/abs/2303.03187)(通过样本自适应加权，能与任何可微因果发现结合，提升CD准确率，进一步在域注释未知情况下解决异质数据中的因果发现；性能与CD骨干模型高度相关，异质性局限于噪声方差变化). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/ReScore.pdf)
 5. KDD 2023 Oral [Discovering Dynamic Causal Space for DAG Structure Learning](https://arxiv.org/abs/2306.02822)(图结构集成到评分函数中，能更好地刻画估计DAG与真实DAG间距离，进一步解决异质数据中CD；异质性局限于噪声均值变化，框架需基于可微CD). [[Slides]](https://github.com/huiyang-yi/Awesome-Causality-and-ML-Papers/blob/main/Slides/CASPER.pdf)
-6. arXiv 2023 [Structure Learning with Continuous Optimization: A Sober Look and Beyond](https://arxiv.org/abs/2304.02146)(相比于方差可变排序性，更合理给出了可微框架表现优劣的原因，并展望了后续改进方向)
+6. arXiv 2023 [Structure Learning with Continuous Optimization: A Sober Look and Beyond](https://arxiv.org/abs/2304.02146)(相比于方差可变排序性，更合理给出了可微框架表现优劣的原因，并展望了后续改进方向). [[Reading Notes]](https://zhuanlan.zhihu.com/p/674880782) 
 7. NIPS 2023 [A Scale-Invariant Sorting Criterion to Find a Causal Order in Additive Noise Models](https://arxiv.org/abs/2303.18211)(基于R^{2}可排序性的尺度不变性，解决线性情况下尺度变化数据中的因果发现). [[Reading Notes]](https://zhuanlan.zhihu.com/p/673527734) 
    
 
