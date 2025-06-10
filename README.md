@@ -36,7 +36,7 @@ This is a repository for organizing articles related to causal discovery, invari
 1. JMLR 2007 [Estimating high-dimensional directed acyclic graphs with the PC-algorithm](https://arxiv.org/abs/math/0510436)(PC算法通过条件独立性测试来确定因果骨架，并通过定向准则来确定因果方向，最终得到MEC)
 2. JMLR 2002 [Optimal structure identification with greedy search](https://dl.acm.org/doi/10.1162/153244303321897717)(GES定义一个评分函数用于衡量MEC与观测数据的拟合程度，并搜索DAG空间以找到得分最高的MEC；GES采用局部启发式方法对DAG进行搜索)
 3. JMLR 2006 [A Linear Non-Gaussian Acyclic Model for Causal Discovery](https://dl.acm.org/doi/10.5555/1248547.1248619)(LiNGAM假设变量间的函数关系为线性非高斯，通过原因与残差的独立性判断因果方向，同时将LiNGAM模型转为ICA的形式高效求解)
-4. NIPS 2008 [Nonlinear causal discovery with additive noise models](https://proceedings.neurips.cc/paper/2008/file/12c5ceaba28b18b52c15891893102e46-Paper.pdf)(ANM假设变量间的函数关系为非线性加性噪声模型，通过原因与残差的独立性判断因果方向)
+4. NIPS 2008 [Nonlinear causal discovery with additive noise models](https://papers.nips.cc/paper_files/paper/2008/hash/f7664060cc52bc6f3d620bcedc94a4b6-Abstract.html)(ANM假设变量间的函数关系为非线性加性噪声模型，通过原因与残差的独立性判断因果方向)
 5. UAI 2009 [On the Identifiability of the Post-Nonlinear Causal Model](https://arxiv.org/abs/1205.2599)(PNL假设变量间的函数关系为后非线性模型，通过原因与残差的独立性判断因果方向，并可证明LiNGAM与ANM是PNL的特殊形式)
 6. JMLR 2011 [DirectLiNGAM: A direct method for learning a linear non-Gaussian structural equation model](https://arxiv.org/abs/1101.2489)(DirectLiNGAM相比于LiNGAM求解速度变慢，但精度和收敛性变好，同时尺度稳定)
 
